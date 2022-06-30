@@ -57,17 +57,20 @@ void yyerror(char *);
 "ReadLine"              return READLINE;
 "["                     return OSQ;
 "]"                     return CSQ;
-"true"                      {yylval.boolValue = 1; return boolConst;}
-"false"                   {yylval.boolValue = 0; return boolConst;}
+"true"                  {yylval.boolValue = 1; return boolConst;}
+"false"                 {yylval.boolValue = 0; return boolConst;}
 
 [a-zA-Z]+[a-zA-Z0-9_]*    { 
                             yylval.sValue = (char *) strdup(yytext); return VARIABLE;
                           }
-['][a-zA-Z]+[a-zA-Z0-9_]*[']    { 
+['][a-zA-Z0-9_ ]*[']    { 
                             yylval.sconsValue = (char *) strdup(yytext); return stringConst;
                           }
 
 [ \t\n]+        ;       /* ignore whitespace */
+
+"//"[a-zA-Z0-9 \t]+    ;
+"/*"[a-zA-Z0-9 \t\n]*"*/"    ;
 
 .               yyerror("Unknown character");
 %%

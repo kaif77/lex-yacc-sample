@@ -1,0 +1,71 @@
+//check if Variable declaration is working
+int x;
+string x;
+
+//check if variable initialization is working
+int x =10;
+
+//check if for loops works
+for (i = 0; i < 10; x=x+1) {
+    y=y+1;
+}
+
+//check if for loops works without fist  expression
+for (; x<10; x=x+1) {
+    y=y+1;
+}
+
+//check if for loops works without final expression
+for (x=0; x<10;) {
+    y=y+1;
+}
+
+//check if if statements works
+if (x<y) {
+    x=x+1;
+}
+else {
+    y=y+1;
+}
+
+//check if print statements works
+print(x,y);
+print(x);
+print(1);
+
+//function declaration
+int main() {
+int x;
+int y;
+}
+
+void main() {
+int x;
+int y;
+}
+
+
+/* Invalid test cases */
+
+//print statement without brackets
+print x;
+
+//using invalid syntax
+String x;
+Int x;
+
+// if without brackets
+if x>y  {
+    z= x+y
+ }
+
+
+// declare class within a class
+class Vehicle {
+    class Car {
+        int wheel;
+    }
+}
+
+// initialize statement block to a variable
+string Vehicle = { car , bike };

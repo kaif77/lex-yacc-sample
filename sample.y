@@ -52,7 +52,6 @@ stmt:
           ';'                                         {  }
         | expr ';'                                    {  }
         | print_decl                                  {  }
-        | VARIABLE '=' expr ';'                       {  }
         | decl                                        {  }
         | for_stmt                                    {  }
         | WHILE '(' expr ')'  stmt                    {  }
